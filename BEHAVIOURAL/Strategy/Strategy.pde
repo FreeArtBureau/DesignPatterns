@@ -6,7 +6,8 @@
  * Sketch : Strategy Pattern
  *
  * Summary : Used to encapsulate a family of 'algorithms'
- *           Keeps behaviours separate from the concrete parent class
+ *           Keeps behaviours separate from the concrete
+ *           parent class
  */
 
 
