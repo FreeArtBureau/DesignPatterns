@@ -5,7 +5,10 @@
  *
  * Sketch : Decorator Pattern
  *
- * Summary : Used for dynamically changing the responsibilites of objects at runtime
+ * Summary : Dynamically changes the responsibilites
+ *           of objects at runtime.
+ *           Often used to add extra functionalities
+ *           to an abstract component class.
  *
  */
 
