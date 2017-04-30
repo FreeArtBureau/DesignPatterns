@@ -1,3 +1,19 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class Decorator extends PApplet {
+
 /*
  * ::::::::::::::::::::::::::::
  * DESIGN PATTERNS & STRATEGIES
@@ -18,7 +34,7 @@
 Message myMSG = new SimpleMessage();
 /////////////////////////// SETUP ////////////////////////////
 
-void setup() {
+public void setup() {
   //size(340, 340);
   background(0,0,33);
   myMSG.addMSG("In the beginning...");
@@ -29,12 +45,12 @@ void setup() {
 }
 
 /////////////////////////// DRAW ////////////////////////////
-void draw() {
+public void draw() {
 
 }
 
 /////////////////////////// FUNCTIONS ////////////////////////////
-void keyPressed(){
+public void keyPressed(){
 
 
 }
@@ -44,7 +60,7 @@ void keyPressed(){
 public abstract class Message{
   public String msg;
 
-  String getMSG(){
+  public String getMSG(){
     return msg;
   }
   public abstract void addMSG(String _m);
@@ -95,5 +111,14 @@ public class ShortNote extends Note {
   public void displayMSG(){
     theMSG.displayMSG();
     println("Note: "+theMSG);
+  }
+}
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "Decorator" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
   }
 }

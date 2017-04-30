@@ -1,5 +1,8 @@
-import geomerative.*;
+/*
+ *
+ */
 
+import geomerative.*;
 
 public interface Shape {
 	void draw();

@@ -54,7 +54,6 @@ public void draw() {
 /////////////////////////// FUNCTIONS ////////////////////////////
 
 
-
 public interface Shape {
 	public void draw();
 }

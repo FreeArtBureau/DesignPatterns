@@ -1,9 +1,70 @@
-import geomerative.*;
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import geomerative.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class FactoryMethod_02 extends PApplet {
+
+/*
+ * ::::::::::::::::::::::::::::
+ * DESIGN PATTERNS & STRATEGIES
+ * ::::::::::::::::::::::::::::
+ *
+ * Sketch : FactoryMethod_02
+ *
+ * Summary : A factory of object instances for creating geometric shapes
+ *           In this sketch we move on to actually computing & displaying
+ *           the shapes we have created.
+ */
+
+
+/////////////////////////// GLOBALS ////////////////////////////
+ShapeFactory shapeFactory = new ShapeFactory();
+Shape myShape1 = shapeFactory.createShape("LINE");
+Shape myShape2 = shapeFactory.createShape("CIRCLE");
+Shape myShape3 = shapeFactory.createShape("POLYGON");
+
+/////////////////////////// SETUP ////////////////////////////
+
+public void setup() {
+  
+  background(0);
+
+  //@params : size / step / angle
+  myShape1.computeShape(770, 30, 45);
+  myShape2.computeShape(370, 50, 0);
+  myShape3.computeShape(100, 7, 45);
+
+    //@params : central position / contourON/OFF
+    PVector pos = new PVector(width/2, height/2);
+    myShape1.drawShape(pos, false);
+    myShape2.drawShape(pos, false);
+    myShape3.drawShape(pos, true);
+}
+
+/////////////////////////// DRAW ////////////////////////////
+public void draw() {
+  //background(255);
+}
+
+/////////////////////////// FUNCTIONS ////////////////////////////
+
 
 
 public interface Shape {
-  void computeShape(int _size, int  _step, float _angle);
-  void drawShape(PVector _relativeCoord, boolean _isContour);
+  public void computeShape(int _size, int  _step, float _angle);
+  public void drawShape(PVector _relativeCoord, boolean _isContour);
 }
 ////////////////////////// CIRCLE SHAPE
 
@@ -52,6 +113,7 @@ public class Polygon implements Shape {
   ArrayList<PVector> abPoints;
   RPolygon polyCircle;
   RPoint[] polyPnts;
+  float strokeW = 1;
   float theta;
 
   public void computeShape(int _size, int  _step, float _angle) {
@@ -71,7 +133,8 @@ public class Polygon implements Shape {
 
       for (int i=0; i<polyPnts.length; i++) {
         noFill();
-        //stroke(0, 255, 255);
+        stroke(0, 255, 255);
+        strokeWeight(strokeW);
         vertex(polyPnts[i].x, polyPnts[i].y);
       }
       endShape(CLOSE);
@@ -83,7 +146,7 @@ public class Polygon implements Shape {
 
       for (int i=0; i<polyPnts.length; i++) {
         noStroke();
-        //fill(0, 0, 255);
+        fill(0, 0, 255);
         ellipse(polyPnts[i].x, polyPnts[i].y, 7, 7);
       }
       popMatrix();
@@ -155,5 +218,15 @@ public class ShapeFactory {
       return new Line();
     }
     return null;
+  }
+}
+  public void settings() {  size(640, 640); }
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "FactoryMethod_02" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
   }
 }
