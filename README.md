@@ -12,7 +12,7 @@ Design Patterns for Processing.
 
 ## Contents
 
-* Behavioural
+* [Behavioural](https://github.com/FreeArtBureau/DesignPatterns/tree/master/BEHAVIOURAL)
 * Creation
 * Structure
 * Tools
