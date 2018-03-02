@@ -14,7 +14,7 @@ Design Patterns for Processing.
 
 * [Behavioural](https://github.com/FreeArtBureau/DesignPatterns/tree/master/BEHAVIOURAL)
 * [Creation](https://github.com/FreeArtBureau/DesignPatterns/tree/master/CREATION)
-* Structure
+* [Structure](https://github.com/FreeArtBureau/DesignPatterns/tree/master/STRUCTURE)
 * Tools
 
 ## Install
