@@ -25,7 +25,7 @@ https://processing.org/
 
 ## Contact & Sundries
 
-* mwebster@fabprojects.codes
+* mw@fabprojects.codes
 * Version v0.2
 * Tools used : Processing
 
