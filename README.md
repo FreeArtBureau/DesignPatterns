@@ -12,9 +12,9 @@ Design Patterns for Processing.
 
 ## Contents
 
-* Behavioural
-* Creation
-* Structure
+* [Behavioural](https://github.com/FreeArtBureau/DesignPatterns/tree/master/BEHAVIOURAL)
+* [Creation](https://github.com/FreeArtBureau/DesignPatterns/tree/master/CREATION)
+* [Structure](https://github.com/FreeArtBureau/DesignPatterns/tree/master/STRUCTURE)
 * Tools
 
 ## Install
@@ -25,7 +25,7 @@ https://processing.org/
 
 ## Contact & Sundries
 
-* mwebster@fabprojects.codes
+* mw@fabprojects.codes
 * Version v0.2
 * Tools used : Processing
 
