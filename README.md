@@ -7,7 +7,7 @@ Organising The particulars.
 ---
 
 # NOTE
-  I've migrated to BitBucket. This repository will no longer be updated. To follow further developments, please go to my current BitBucket.
+  I've migrated to [BitBucket.](https://bitbucket.org/mwebster_/) This repository will no longer be updated. To follow further developments, please go to my current BitBucket.
   
   [*Designing Patterns Repository*](https://bitbucket.org/mwebster_/designpatterns)
   
